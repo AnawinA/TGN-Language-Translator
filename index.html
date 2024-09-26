@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encoder/Decoder Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Encoder/Decoder Tool</h1>
+    </header>
+
+    <main>
+        <label for="inputText">Enter text:</label>
+        <textarea id="inputText" placeholder="Type your text here..." oninput="processText()"></textarea>
+
+        <div class="options">
+            <label>
+                <input type="radio" name="mode" value="encode" checked onchange="toggleGroup()">
+                Encode
+            </label>
+            <label>
+                <input type="radio" name="mode" value="decode" onchange="toggleGroup()">
+                Decode
+            </label>
+        </div>
+
+        <label>Result:</label>
+        <div id="outputText" class="output"></div> <!-- Result area -->
+
+        <div class="settings">
+            <div>
+                <button onclick="processBtn()">Process</button>
+                <button class="grey-btn" onclick="copyClip()"><img src="./images/copy icon.svg" alt="copy icon"></button>
+            </div>
+            <label for="caseOption">Lowercase? <input type="checkbox" id="caseOption"></label><span class="middot">&middot;</span>
+            <label for="standardOption">Modern? <input type="checkbox" id="standardOption"></label><span class="middot">&middot;</span>
+            <label for="fontOption">Font Family:
+            <select id="fontOption">
+                <option value="system-ui, -apple-system, BlinkMacSystemFont,
+'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">default</option>
+                <optgroup label="serif">
+                    <option value="'Georgia', serif">Georgia</option>
+                    <option value="'Times New Roman', serif">Times New Roman</option>
+                </optgroup>
+                <optgroup label="sans-serif">
+                    <option value="'Arial', sans-serif">Arial</option>
+                    <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Verdana</option>
+                </optgroup>
+                <optgroup label="others">
+                    <option value="'Courier New', monospace">Courier New</option>
+                    <option value="'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Gill Sans</option>
+                    <option value="cursive">cursive</option>
+                </optgroup>
+            </select></label>
+
+        </div>
+        <div id="description" class="description">
+            <h2>How to Use</h2>
+            <p>1. Type or paste your text into the "Enter text" box.</p>
+            <p>2. Click the "Translate" button to process the translation.</p>
+            <p>3. The translated text will appear in the "Translated text" box below.</p>
+            <p>Note: This is a basic translator, and the actual translation functionality is a placeholder. For a real translation, the feature would need to be integrated with a language API.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>About: This is an encoder/decoder tool with custom font and case options.</p>
+        
+    </footer>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

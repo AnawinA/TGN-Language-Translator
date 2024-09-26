@@ -1,0 +1,185 @@
+body {
+    background-color: #1c1c1c;
+    color: #eaeaea;
+    font-family: Arial, sans-serif; /* Default font for body */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 1.2em; /* Increased base font size for body text */
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    border-bottom: 2px solid #444;
+}
+
+header h1 {
+    font-size: 2.5em; /* Keep the h1 size */
+    margin: 0;
+    color: #f39c12;
+}
+
+main {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    min-height: calc(100vh - 160px);
+}
+
+label {
+    display: block;
+    margin: 20px 0 10px;
+    font-size: 1.1em; /* Increased label size */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #eaeaea;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 24px; /* Set textarea font size to 24px */
+    height: 120px;
+    font-weight: normal; /* Set normal font weight */
+    font-family: 'Courier New', monospace; /* Set font family to Monospace */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #1c1c1c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em; /* Increased button size */
+    margin: 2px 2px;
+}
+
+label {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+label:has(input[type="checkbox"]), label:has(input[type="radio"]) {
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #e67e22;
+}
+
+button:active {
+    background-color: #ffab62;
+}
+
+button.grey-btn {
+    background-color: #444;
+    aspect-ratio: 1/1;
+    width: 50px;
+}
+
+button.grey-btn:hover {
+    background-color: #333;
+}
+
+button.grey-btn:active {
+    background-color: #555;
+    outline: medium solid #777;
+}
+
+button > img {
+    width: 50px;
+    margin: -20px;
+    position: relative;
+    bottom: 3px;
+}
+
+.options {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.options label {
+    font-size: 1.1em; /* Increased options label size */
+    margin-right: 20px;
+    color: #f39c12;
+}
+
+.settings {
+    margin-top: 10px;
+    text-align: left;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0 10px;
+}
+
+.settings label {
+    font-size: 1.1em; /* Increased settings label size */
+    color: #f39c12;
+    /* border: 1px solid #444; */
+}
+
+select {
+    padding: 5px;
+    background-color: #333;
+    color: #eaeaea;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.output {
+    background-color: #444;
+    color: #eaeaea;
+    padding: 10px;
+    margin-top: 10px;
+    min-height: 100px;
+    text-align: left;
+    font-size: 24px; /* Set output text size to 24px */
+    border-radius: 5px;
+    border: 1px solid #444;
+    word-wrap: break-word;
+    font-weight: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #444;
+    height: 80px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #eaeaea;
+    font-size: 1em; /* Increased footer text size */
+}
+
+.description {
+    background-color: #333;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-top: 70px;
+    text-align: left;
+}
+
+.description h2 {
+    font-size: 1.5em;
+    color: #f39c12;
+}
+
+.middot {
+    color: #444;
+}
