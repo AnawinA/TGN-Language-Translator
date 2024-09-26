@@ -10,7 +10,7 @@ window.toggleGroup = function() {
     var mode = document.querySelector('input[name="mode"]:checked').value;
     if (mode === 'decode') {
         swapText();
-        input.placeholder = "Τ̣ΠΖ̣ΔΣ̣ΛΠ̣Ν Ζ̣ΔΝ̣ΖΣ̣ΝΤ ΠΠ̣ΝΖ̣ΛΣ̣Π Ν̣ΛΠ̣ΝΣ̣ΤΠ̣Ν · · ·";
+        input.placeholder = "Τ.ΠΖ.ΔΣ.ΛΠ.Ν Ζ.ΔΝ.ΖΣ.ΝΤ ΠΠ.ΝΖ.ΛΣ.Π Ν.ΛΠ.ΝΣ.ΤΠ.Ν · · ·";
         littleDesc.style.display = "block";
     } else if (mode === 'encode') {
         swapText();

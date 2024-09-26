@@ -88,9 +88,9 @@ const mapping = {
     'S': 'Σ',
     'Z': 'Ζ',
     "'": '°',
-    '.': '̣',
+    "ฺ":  '.',
+    '.': '.',
     ";": '·',
-    '̣' : '̣',
 };
 
 function translate(input) {
@@ -134,11 +134,11 @@ function toBase8Lang(text, isStandard = false) {
         }
         if (asciiOrder[0] !== thirdNum) {
             thirdNum = asciiOrder[0];
-            base8Lang += toGreekChar(thirdNum) + "°";
+            base8Lang += toGreekChar(thirdNum) + ((isStandard) ? "°" : "ํ");
         }
         if (asciiOrder[1] !== secondNum) {
             secondNum = asciiOrder[1];
-            base8Lang += toGreekChar(secondNum) + ((isStandard) ? "." : "̣");
+            base8Lang += toGreekChar(secondNum) + ((isStandard) ? "." : "ฺ");
         }
         base8Lang += toGreekChar(asciiOrder[2]);
     }
@@ -160,12 +160,12 @@ function toEnglish(text) {
             continue
         } else if (char === "ํ" || char === "°") {
             thirdNum = text[i-1];
-        } else if (char === "̣" || char === ".") {
+        } else if (char === "ฺ" || char === ".") {
             secondNum = text[i-1];
         } else if (!"ΛΔΤΓΠΝΣΖ".includes(char)) {
             englishLang += text[i];
             continue
-        } else if (!["ํ", "°", "̣", "."].includes(text[i+1])) {
+        } else if (!["ํ", "°", "ฺ", "."].includes(text[i+1])) {
             asciiOrder = [
                 greekToNumChar(thirdNum),
                 greekToNumChar(secondNum),
@@ -175,5 +175,6 @@ function toEnglish(text) {
     }
     return englishLang
 }
+
 
 export { toBase8Lang, toEnglish, translate };
