@@ -3,15 +3,19 @@ import { toBase8Lang, toEnglish, translate } from "./tgnTranlate.js";
 const caseCheckbox = document.getElementById('caseOption');
 const standardCheckbox = document.getElementById('standardOption');
 const input = document.getElementById('inputText');
+const littleDesc = document.getElementById('little-desc');
+littleDesc.style.display = "none";
 
 window.toggleGroup = function() {
     var mode = document.querySelector('input[name="mode"]:checked').value;
     if (mode === 'decode') {
         swapText();
-        input.placeholder = "ΤฺΠΖฺΔΣฺΛΠฺΝ ΖฺΔΝฺΖΣฺΝΤ ΠΠฺΝΖฺΛΣฺΠ ΝฺΛΠฺΝΣฺΤΠฺΝ · · ·";
+        input.placeholder = "Τ̣ΠΖ̣ΔΣ̣ΛΠ̣Ν Ζ̣ΔΝ̣ΖΣ̣ΝΤ ΠΠ̣ΝΖ̣ΛΣ̣Π Ν̣ΛΠ̣ΝΣ̣ΤΠ̣Ν · · ·";
+        littleDesc.style.display = "block";
     } else if (mode === 'encode') {
         swapText();
         input.placeholder = "Type your text here...";
+        littleDesc.style.display = "none";
     }
 }
 

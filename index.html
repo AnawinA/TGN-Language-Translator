@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encoder/Decoder Tool</title>
+    <title>TGN translator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Encoder/Decoder Tool</h1>
+        <h1>TGN Language Translator</h1>
+        <h2>by Anawin <span class="middot">&middot;</span> for Program Lang. <span class="middot">&middot;</span> v(0.1)</h2>
     </header>
 
     <main>
         <label for="inputText">Enter text:</label>
         <textarea id="inputText" placeholder="Type your text here..." oninput="processText()"></textarea>
-
+        <details id="little-desc" class="little-desc">
+            <summary>Guides TGN</summary>
+            <p><small>A=Λ&nbsp;&nbsp;D=Δ&nbsp; T=Τ&nbsp;&nbsp;G=Γ&nbsp; N=Ν&nbsp;&nbsp;P=Π&nbsp; S=Σ&nbsp;&nbsp;Z=Ζ&nbsp; [extra:
+                &nbsp;'=°&nbsp;&nbsp;.=Δ̣ &nbsp;&nbsp;;=·</small>]</p>
+        </details>
         <div class="options">
             <label>
                 <input type="radio" name="mode" value="encode" checked onchange="toggleGroup()">
@@ -57,6 +62,8 @@
 
         </div>
         <div id="description" class="description">
+            <h2>What is TGN language?</h2>
+            <del><small>more description later...</small></del>
             <h2>How to Use</h2>
             <p>1. Type or paste your text into the "Enter text" box.</p>
             <p>2. Click the "Translate" button to process the translation.</p>

@@ -21,6 +21,11 @@ header h1 {
     color: #f39c12;
 }
 
+header h2 {
+    font-size: 1.2em; /* Keep the h1 size */
+    margin: 10px 0 0 0;
+}
+
 main {
     padding: 30px;
     max-width: 800px;
@@ -178,6 +183,29 @@ footer p {
 .description h2 {
     font-size: 1.5em;
     color: #f39c12;
+}
+
+
+.little-desc {
+    background-color: #333;
+    padding: 5px 30px;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.little-desc summary {
+    font-size: 0.8em;
+    color: #f39c12;
+    margin: 0.1em;
+}
+
+.little-desc p {
+    margin: 0.1em;
 }
 
 .middot {
